@@ -42,8 +42,6 @@
     --white: #ffffff;
     --black: #000000;
 
-    --blue: #3b82f6;
-    
     /* Color Palette */
     --blue: #3b82f6;
     --cyan: #06b6d4;
@@ -73,8 +71,18 @@ body {
     color: var(--text-color);
     min-height: 100dvh;
     overflow-x: hidden !important;
-    zoom: 0.67; 
+    /* Removed zoom property - use transform: scale() if scaling is truly needed */
 }
+
+/* Optional: If you actually need to scale the entire page */
+/* Use this instead of zoom, but note it has its own limitations */
+body {
+    transform: scale(0.67);
+    transform-origin: top left;
+    width: 149.25%; /* 100 / 0.67 */
+    height: 149.25%; /* 100 / 0.67 */
+}
+*/
 
 
 /* Loader full screen */
